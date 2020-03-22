@@ -808,7 +808,7 @@ void mmu_load_to_nozzle()
     float feedrate = 562;
 	plan_buffer_line_curposXYZE(feedrate / 60, active_extruder);
     st_synchronize();
-	current_position[E_AXIS] += 14.4f;
+	current_position[E_AXIS] += 8.0f;
 	feedrate = 871;
 	plan_buffer_line_curposXYZE(feedrate / 60, active_extruder);
     st_synchronize();
@@ -816,7 +816,7 @@ void mmu_load_to_nozzle()
 	feedrate = 1393;
 	plan_buffer_line_curposXYZE(feedrate / 60, active_extruder);
     st_synchronize();
-	current_position[E_AXIS] += 14.4f;
+	current_position[E_AXIS] += 23.0f;
 	feedrate = 871;
 	plan_buffer_line_curposXYZE(feedrate / 60, active_extruder);
     st_synchronize();
@@ -1444,9 +1444,9 @@ bFilamentAction=false;                            // NOT in "mmu_fil_eject_menu(
 //! @retval false Doesn't fit
 static bool can_load()
 {
-    current_position[E_AXIS] += 60;
+    current_position[E_AXIS] += 52;
     plan_buffer_line_curposXYZE(MMU_LOAD_FEEDRATE, active_extruder);
-    current_position[E_AXIS] -= 52;
+    current_position[E_AXIS] -= 44;
     plan_buffer_line_curposXYZE(MMU_LOAD_FEEDRATE, active_extruder);
     st_synchronize();
 
