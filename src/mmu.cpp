@@ -767,7 +767,7 @@ void mmu_load_to_nozzle()
   #elif defined(BONDTECH_MOSQUITO)
     current_position[E_AXIS] += 23.4f; //Bondtech Mosquito 9 mm longer t melt zone
   #elif defined(BONDTECH_MOSQUITO_MAGNUM)
-    current_position[E_AXIS] += 18.4f; //Bondtech Mosquito Magnum 5 mm longer t melt zone
+    current_position[E_AXIS] += 8.4f; //Bondtech Mosquito Magnum 5 mm longer t melt zone
   #else
 	 current_position[E_AXIS] += 14.4f;
   #endif
@@ -782,7 +782,7 @@ void mmu_load_to_nozzle()
   #ifdef BONDTECH_MOSQUITO
     current_position[E_AXIS] += 16.4f; //2mm further through Mosquito heat block
   #elif defined(BONDTECH_MOSQUITO_MAGNUM)
-    current_position[E_AXIS] += 21.4f; //7mm further through Mosquito Magnum heat block
+    current_position[E_AXIS] += 7.6f; // was 21.4
   #else
 	  current_position[E_AXIS] += 14.4f;
   #endif
@@ -918,12 +918,12 @@ static const E_step ramming_sequence[] PROGMEM =
         {2.0, 2000.0 / 60},
         {1.5, 3000.0 / 60},
         {2.5, 4000.0 / 60},
-        {-15.0, 5000.0 / 60},
+        {-22.0, 5000.0 / 60},
         {-14.0, 1200.0 / 60},
         {-6.0, 600.0 / 60},
         {10.0, 700.0 / 60},
         {-10.0, 400.0 / 60},
-        {-50.0, 2000.0/60}
+        {-34.0, 2000.0/60}
 };
 
 //! @brief Unload sequence to optimize shape of the tip of the unloaded filament
@@ -1095,7 +1095,7 @@ static bool can_load()
     #elif defined(BONDTECH_MOSQUITO)
       current_position[E_AXIS] += 70; //Bondtech_Mosquito 70mm from drive gear to melt zone
     #elif defined(BONDTECH_MOSQUITO_MAGNUM)
-      current_position[E_AXIS] += 62; //Bondtech_Mosquito_Magnum 62mm from drive gear to melt zone
+      current_position[E_AXIS] += 52; //Bondtech_Mosquito_Magnum 52mm from drive gear to melt zone
     #else
       current_position[E_AXIS] += 60;
     #endif
@@ -1108,7 +1108,7 @@ static bool can_load()
     #elif defined(BONDTECH_MOSQUITO)
       current_position[E_AXIS] -= 62; // Pull back 62mm, 8 mm below drive gear
     #elif defined(BONDTECH_MOSQUITO_MAGNUM)
-      current_position[E_AXIS] -= 54; // Pull back 54mm, 8 mm below drive gear
+      current_position[E_AXIS] -= 44; // Pull back 44mm, 8 mm below drive gear
     #else
       current_position[E_AXIS] -= 52;
     #endif
