@@ -2,3 +2,5 @@
 .pio
 .vscode
 /src/Configuration_prusa.h
+src/src.ino.prusa_einsy_rambo.hex
+src/src.ino.with_bootloader.prusa_einsy_rambo.hex

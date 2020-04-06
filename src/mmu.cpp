@@ -782,7 +782,7 @@ void mmu_load_to_nozzle()
   #ifdef BONDTECH_MOSQUITO
     current_position[E_AXIS] += 16.4f; //2mm further through Mosquito heat block
   #elif defined(BONDTECH_MOSQUITO_MAGNUM)
-    current_position[E_AXIS] += 7.6f; // was 21.4
+    current_position[E_AXIS] += 21.4f; // was 21.4 (7.4)
   #else
 	  current_position[E_AXIS] += 14.4f;
   #endif
@@ -1095,7 +1095,7 @@ static bool can_load()
     #elif defined(BONDTECH_MOSQUITO)
       current_position[E_AXIS] += 70; //Bondtech_Mosquito 70mm from drive gear to melt zone
     #elif defined(BONDTECH_MOSQUITO_MAGNUM)
-      current_position[E_AXIS] += 52; //Bondtech_Mosquito_Magnum 52mm from drive gear to melt zone
+      current_position[E_AXIS] += 47; //Bondtech_Mosquito_Magnum 52mm from drive gear to melt zone
     #else
       current_position[E_AXIS] += 60;
     #endif
@@ -1108,7 +1108,7 @@ static bool can_load()
     #elif defined(BONDTECH_MOSQUITO)
       current_position[E_AXIS] -= 62; // Pull back 62mm, 8 mm below drive gear
     #elif defined(BONDTECH_MOSQUITO_MAGNUM)
-      current_position[E_AXIS] -= 44; // Pull back 44mm, 8 mm below drive gear
+      current_position[E_AXIS] -= 39; // Pull back 44mm, 8 mm below drive gear
     #else
       current_position[E_AXIS] -= 52;
     #endif
