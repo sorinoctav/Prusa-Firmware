@@ -786,7 +786,7 @@ void mmu_load_to_nozzle()
   #elif defined(BONDTECH_MOSQUITO_MAGNUM)
     current_position[E_AXIS] += 21.4f; //7mm further through Mosquito Magnum heat block
   #elif defined(COMPACTEXTRUDER)
-    current_position[E_AXIS] += 21.4f;
+    current_position[E_AXIS] += 8.4f;
   #else
 	  current_position[E_AXIS] += 14.4f;
   #endif
@@ -922,12 +922,12 @@ static const E_step ramming_sequence[] PROGMEM =
         {2.0, 2000.0 / 60},
         {1.5, 3000.0 / 60},
         {2.5, 4000.0 / 60},
-        {-22.0, 5000.0 / 60},
+        {-25.0, 5000.0 / 60},
         {-14.0, 1200.0 / 60},
         {-6.0, 600.0 / 60},
         {10.0, 700.0 / 60},
         {-10.0, 400.0 / 60},
-        {-34.0, 2000.0/60}
+        {-28.0, 2000.0/60}
 };
 
 //! @brief Unload sequence to optimize shape of the tip of the unloaded filament
